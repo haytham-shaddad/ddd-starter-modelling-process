@@ -1,0 +1,129 @@
+{
+  "files.associations": {
+    "*.md": "markdown"
+  },
+  "markdown.validate.enabled": true,
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": false,
+  
+  // GitHub Copilot settings
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": true
+  },
+  
+  // Workspace-specific Copilot instructions
+  "github.copilot.advanced": {
+    "debug.overrideEngine": "gpt-4",
+    "inlineSuggestCount": 3
+  },
+  
+  // Recommendations for extensions
+  "recommendations": [
+    "github.copilot",
+    "github.copilot-chat"
+  ],
+  
+  // Editor suggestions for DDD work
+  "editor.quickSuggestions": {
+    "comments": true,
+    "strings": true,
+    "other": true
+  },
+  
+  // Snippets support
+  "editor.snippetSuggestions": "top",
+  "editor.tabCompletion": "on",
+  
+  // File exploration
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true
+  },
+  
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.git": true
+  },
+  
+  // Custom snippets hint
+  "editor.suggest.showSnippets": true,
+  
+  // Color customizations for markdown
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#5caeef",
+    "editorBracketHighlight.foreground2": "#dfb976",
+    "editorBracketHighlight.foreground3": "#c172d9"
+  },
+  
+  // DDD-specific workspace settings
+  "ddd.processSteps": [
+    "understand",
+    "discover", 
+    "decompose",
+    "strategize",
+    "connect",
+    "organise",
+    "define",
+    "code"
+  ],
+  
+  "ddd.skills": [
+    "ddd-understand",
+    "ddd-discover",
+    "ddd-decompose",
+    "ddd-strategize",
+    "ddd-connect",
+    "ddd-organise",
+    "ddd-define",
+    "ddd-code"
+  ],
+  
+  "ddd.tools": {
+    "visual": [
+      "EventStorming",
+      "Domain Storytelling",
+      "Example Mapping"
+    ],
+    "strategic": [
+      "Business Model Canvas",
+      "Core Domain Charts",
+      "Wardley Mapping",
+      "Impact Mapping"
+    ],
+    "tactical": [
+      "Bounded Context Canvas",
+      "Aggregate Design Canvas",
+      "Context Maps",
+      "Domain Message Flow"
+    ],
+    "organizational": [
+      "Team Topologies",
+      "Dynamic Reteaming",
+      "Independent Service Heuristics"
+    ]
+  },
+  
+  "ddd.buildingBlocks": [
+    "Aggregate",
+    "Entity",
+    "Value Object",
+    "Domain Event",
+    "Repository",
+    "Domain Service",
+    "Factory",
+    "Specification"
+  ],
+  
+  "ddd.contextMapPatterns": [
+    "Partnership",
+    "Customer-Supplier",
+    "Conformist",
+    "Anticorruption Layer",
+    "Shared Kernel",
+    "Open Host Service",
+    "Published Language",
+    "Separate Ways"
+  ]
+}

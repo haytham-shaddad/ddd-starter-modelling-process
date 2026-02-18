@@ -1,0 +1,140 @@
+# Domain-Driven Design (DDD) Knowledge Base
+
+## Overview
+This repository contains DDD knowledge extracted as reusable AI agent skills and slash commands, compatible with GitHub Copilot, Windsurf/OpenCode, and Claude/Cursor.
+
+## DDD Agents (8 Skills)
+
+Expert agents for each step of the DDD process. Each agent has specialized knowledge and can guide you through specific activities.
+
+**Location:** `.github/agents/ddd-*.json`
+
+1. **ddd-understand** - Business alignment & strategy
+2. **ddd-discover** - Domain discovery & EventStorming
+3. **ddd-decompose** - Sub-domain boundaries
+4. **ddd-strategize** - Core domain identification
+5. **ddd-connect** - Integration patterns
+6. **ddd-organise** - Team Topologies
+7. **ddd-define** - Bounded context design
+8. **ddd-code** - Tactical DDD implementation
+
+### Using Agents
+
+**In this IDE:**
+- Agents should be auto-loaded from `.github/agents/`
+- Reference by name: `use ddd-discover agent`
+- Or ask: `@workspace help me with EventStorming using ddd-discover`
+
+**Workflow:**
+1. Start with `ddd-understand` for business context
+2. Use `ddd-discover` for domain exploration (most critical!)
+3. Progress through remaining agents as needed
+4. Iterate - discovery is continuous!
+
+## Slash Commands
+
+Quick DDD assistance without full agent conversation.
+
+**Location:** `.github/DDD-COMMANDS.md` (40+ commands)
+
+### Essential Commands:
+- `/ddd-help` - Show all commands
+- `/ddd-events [process]` - Identify domain events
+- `/ddd-aggregate [name]` - Create aggregate
+- `/ddd-analyze` - Check code for DDD patterns
+- `/ddd-refactor to rich-domain-model` - Fix anemic models
+- `/ddd-boundaries` - Find context boundaries
+- `/ddd-validate` - Verify domain model
+
+## References
+
+**Tools & Patterns:** `.github/ddd-reference.md`
+- Visual collaboration tools (EventStorming, Domain Storytelling)
+- Strategic tools (Core Domain Charts, Wardley Mapping)
+- Tactical patterns (Aggregates, Value Objects, Events)
+- Architecture patterns (Hexagonal, CQRS, Event Sourcing)
+- Team patterns (Team Topologies, Stream-Aligned, Platform)
+
+## Quick Start
+
+### New Project
+```
+1. @workspace use ddd-understand: Create Business Model Canvas for [domain]
+2. @workspace use ddd-discover: Help me run EventStorming for [process]
+3. /ddd-boundaries in [domain]
+4. /ddd-classify [subdomain]
+```
+
+### Implementing Feature
+```
+1. /ddd-events [feature process]
+2. /ddd-aggregate create [AggregateName]
+3. /ddd-value-object extract [fields]
+4. /ddd-test [aggregate]
+```
+
+### Refactoring Legacy
+```
+1. /ddd-analyze [file]
+2. /ddd-debug anemic-model
+3. /ddd-refactor to rich-domain-model
+4. /ddd-validate invariants
+```
+
+## DDD Principles
+
+1. **Discovery is Continuous** - Always learning about the domain
+2. **Ubiquitous Language** - Shared language in code and conversation
+3. **Bounded Contexts** - Clear boundaries with specific models
+4. **Strategic Design** - Focus on core domains
+5. **Tactical Patterns** - Aggregates, Value Objects, Events
+6. **Team Alignment** - Structure follows domain
+
+## Common Patterns
+
+### Aggregates
+Consistency boundaries protecting invariants. External references only to root.
+
+### Value Objects
+Immutable, identity-less concepts. Examples: Money, Address, Email.
+
+### Domain Events
+Immutable facts about what happened. Past tense naming: OrderPlaced, PaymentReceived.
+
+### Repositories
+Aggregate persistence abstraction. Interface in domain, implementation in infrastructure.
+
+## Anti-Patterns to Avoid
+
+- ❌ Anemic Domain Model (only getters/setters)
+- ❌ Skipping Discovery (most critical step!)
+- ❌ Technical Decomposition (layers instead of business capabilities)
+- ❌ Treating all domains equally (core ≠ supporting ≠ generic)
+- ❌ Shared Database between contexts
+- ❌ Distributed Monolith (sync coupling everywhere)
+
+## Learning Path
+
+1. Read: `.github/copilot-instructions.md` - Process overview
+2. Use: `ddd-understand` + `ddd-discover` agents - Build foundation
+3. Practice: Run EventStorming on sample domain
+4. Reference: `.github/ddd-reference.md` - Tools and patterns
+5. Implement: Use `ddd-code` agent for tactical patterns
+6. Iterate: Revisit steps as understanding grows
+
+## Additional Resources
+
+- **Main Repo:** [README.md](../../README.md)
+- **Agents Catalog:** `.github/agents/README.md`
+- **Commands Reference:** `.github/DDD-COMMANDS.md`
+- **DDD Crew:** https://github.com/ddd-crew
+- **EventStorming:** https://www.eventstorming.com/
+- **Team Topologies:** https://teamtopologies.com/
+
+## License
+
+Creative Commons Attribution 4.0 International License
+
+---
+
+**Note:** This is auto-loaded by AI coding assistants. The agents and commands are ready to use!
